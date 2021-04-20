@@ -95,7 +95,7 @@ while x < len(bookedTimes) - 1:                                                 
 if totalBoundary[1] > bookedTimes[len(bookedTimes)-1][1] and totalBoundary[1] - bookedTimes[len(bookedTimes)-1][1] >= 30: #timp liber intre ultima ocupatie si finalul programului de lucru
     freeTimes.append([bookedTimes[len(bookedTimes)-1][1], totalBoundary[1]])
 
-for i in range(len(freeTimes)):
+for i in range(len(freeTimes)):         #schimbam timpul inapoi in format 24h
     for j in range(len(freeTimes[i])):
         hour = freeTimes[i][j] // 60
         minute = freeTimes[i][j] % 60
@@ -105,6 +105,5 @@ for i in range(len(freeTimes)):
 
 
 
-print(bookedTimes)
-print(totalBoundary)
+
 print(freeTimes)
